@@ -1,0 +1,213 @@
+.RefContainer {
+  display: flex;
+  flex-direction: column;
+  z-index: 1500;
+  position: absolute;
+  background-color: #ffffff;
+  width: 80%;
+  margin-top: 6%;
+  border-radius: 15px;
+  padding-bottom: 50px;
+}
+.RefContainer form {
+  margin-bottom: 40px;
+}
+.top {
+  font-family: Roboto Mono;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 0em;
+  color: #071a3e;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 40px;
+}
+.Modal {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.95;
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.Modal2 {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  width: 55%;
+  margin: auto;
+  margin-top: 30px;
+  justify-content: space-around;
+}
+.btns input,
+.btns select {
+  height: 40px;
+  margin: auto;
+  border: 1px solid #95959580;
+  border-radius: 15px;
+  text-align: right;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 5px;
+}
+.btns button {
+  border: 1px solid #95959580;
+  padding: 8px;
+  width: 80px;
+  color: white;
+  text-align: center;
+  font-size: larger;
+  margin-bottom: 20px;
+  background-color: #071a3e;
+  border-radius: 10px;
+}
+.btns button:hover {
+  background-color: #1659e6;
+}
+.girdTable {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 4fr 2fr;
+  text-align: center;
+  background-color: #071a3e;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 60px;
+}
+
+.girdTablefour {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 2fr;
+  text-align: center;
+  background-color: #071a3e;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 60px;
+}
+
+.girdTablesix {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr 3fr 2fr;
+  text-align: center;
+  background-color: #071a3e;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 60px;
+}
+
+.girdItem {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Cairo";
+  font-weight: 600;
+  padding-top: 15px;
+  border-left: 1px solid white;
+  text-align: center;
+  height: 100%;
+}
+.girdTable2 {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 4fr 2fr;
+  text-align: center;
+  color: black;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 50px;
+}
+
+.girdTable2four {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr 2fr;
+  text-align: center;
+  color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 50px;
+}
+
+.girdTablefour,
+.girdTable2four,
+.girdTable,
+.girdTable2,
+.girdTablesix,
+.girdTable2six {
+  width: 100%;
+  min-width: 700px;
+}
+.girdTable2six {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr 3fr 2fr;
+  text-align: center;
+  color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 50px;
+}
+
+.girdItem2 {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Cairo";
+  font-weight: 600;
+  padding-top: 15px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  text-align: center;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-bottom: 1px solid black;
+}
+.girdItem2 button {
+  border-radius: 15px;
+  padding: 0 25px;
+}
+
+@media screen and (max-width: 1090px) {
+  .btns {
+    flex-direction: column;
+  }
+  .btns button {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 380px) {
+  .btns input {
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,80 @@
+.Side {
+  background-color: #071a3e;
+  height: 100vh;
+  width: 17%;
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto Mono;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: white;
+  transition: all 1s;
+}
+.Side hr {
+  border: 2px solid white;
+  margin: 0;
+}
+.menu {
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  height: 35px;
+}
+.menu div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
+.tab {
+  height: 68px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab:hover{
+  background-color: #263655;
+  cursor: pointer;
+}
+
+.tab P {
+  text-align: center;
+  margin: auto;
+}
+/* Nav */
+.Nav {
+  background-color: white;
+  height: 72px;
+  box-shadow: 0px 1px 3px 0px #0000001a;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+}
+.Nav img {
+  width: 65px;
+  height: 50px;
+  padding-top: 10px;
+}
+.Nav h5 {
+  font-family: Roboto Mono;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 1090px) {
+  .tab span {
+    display: none;
+  }
+}
+

@@ -1,0 +1,60 @@
+.Noti {
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 58%;
+  margin: auto;
+  margin-top: 30px;
+  padding-right: 0px;
+}
+.top h4 {
+  color: #798db5;
+  font-family: Roboto Mono;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0em;
+}
+.top button {
+  width: 125px;
+  border-radius: 10px;
+  border: 2px;
+  font-weight: 600;
+  border: 2px solid #0137a3;
+  color: #0137a3;
+  background-color: white;
+}
+.notCard {
+  width: 62%;
+  box-shadow: 0px 1px 2px 0px #0000001a;
+  border: 1px solid #76767669;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    color: #0F2C64;
+    text-align: right;
+}
+.notCard button{
+    background-color: #0F2C64;
+    color: white;
+    border-radius: 10px;
+    width: 80px;
+    height: 50px;
+}
+
+.notCard button:hover{
+    background-color: #1e57ca;
+}

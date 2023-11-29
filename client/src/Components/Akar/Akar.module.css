@@ -1,0 +1,17 @@
+.Choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Single {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    min-width: 50%;
+}
+.Single2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    min-width: 33%;
+}

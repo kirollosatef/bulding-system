@@ -1,0 +1,238 @@
+.topContainer {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+.nameOfAllah {
+  background-color: #dcdcdc;
+  height: 5rem;
+  color: black;
+  text-align: center !important;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 25px;
+  border: 2px solid grey;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+.tmp {
+  height: 30px;
+  background-color: #ffffff;
+}
+.toPrint {
+  border: 3px solid black;
+  margin-left: auto;
+  height: 100% !important;
+  margin-right: auto;
+}
+.nav {
+  background-color: #071a3e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+  height: 70px !important;
+  margin-top: 0px;
+}
+.nav button {
+  background-color: #071a3e;
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.nav div {
+  margin-right: 20px;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5px;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: "Cairo";
+  margin-bottom: 0px;
+}
+.top img {
+  width: 100px;
+  height: 100px;
+}
+.topW {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: 90px;
+  overflow: auto;
+}
+.topW div {
+  text-align: end;
+  line-height: 25px;
+}
+.head {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 800;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+}
+.tabl {
+  border: 1px solid black;
+  width: 90%;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+  margin-bottom: 35px;
+}
+.tabl div {
+  border-bottom: 0.5px solid black;
+}
+.def {
+  display: flex;
+}
+.def div {
+  text-align: right;
+  width: 50%;
+  padding: 10px;
+}
+.def > div {
+  border-left: 1px solid black;
+}
+.notice {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.qr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 250px;
+  margin-top: 80px;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: 800;
+  width: 100%;
+  margin: auto;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.btn {
+  background-color: #071a3e;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+  margin-left: 45%;
+  margin-top: 20px;
+}
+.Scontainer {
+  background-color: #ffffff;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 11px 2px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px;
+  text-align: right;
+  font-size: 20px;
+  line-height: 40px;
+}
+.Scontainer button {
+  width: 20%;
+  padding: 20px;
+  color: white;
+  background-color: #071a3e;
+  border-radius: 10px;
+  border: none;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .topContainer {
+    flex-direction: column;
+  }
+  .Scontainer {
+    width: 85%;
+  }
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  border-bottom: 16px solid black;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  margin-top: 15%;
+}
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and(max-width:390px) {
+  .logo {
+    width: 170px;
+    height: 200px;
+  }
+  .footer {
+    width: 100%;
+    padding-left: 0px ;
+    padding-right: 0px;
+    border: 1px solid red !important;
+  }
+}
