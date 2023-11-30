@@ -28,11 +28,15 @@ const buildingRoutes = require("./routes/buildingRoutes");
 const clientRoutes = require("./routes/clientRoutes");
 const rentRoutes = require("./routes/rentRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
+const { createAdminIfNotExist } = require("./controllers/userController");
 app.use("/auth", userRoutes);
 app.use("/building", buildingRoutes);
 app.use("/client", clientRoutes);
 app.use("/rent", rentRoutes);
 app.use("/payment", paymentRoutes);
+
+createAdminIfNotExist();
+
 app.listen(5000, () => {
   console.log(`server is running on port 5000`);
 });

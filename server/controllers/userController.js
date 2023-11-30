@@ -44,4 +44,16 @@ const signUp = async (req, res) => {
   }
 };
 
-module.exports = { signIn, signUp };
+const createAdminIfNotExist = async () => {
+  let tmp = await User.find({ name: "admin" });
+  if (tmp.length == 0) {
+    bcrypt.hash("admin", 10).then(async (hashed) => {
+      tmp = await User.create({
+        name: "admin",
+        password: hashed,
+      });
+    });
+  }
+};
+
+module.exports = { signIn, signUp ,createAdminIfNotExist };
