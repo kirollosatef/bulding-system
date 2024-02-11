@@ -24,7 +24,7 @@ const getAll = async (req, res) => {
   let page = req.query.page;
   let start = page ? (page - 1) * 10 : 0;
   try {
-    let result = await Building.find({}).skip(start).limit(10);
+    let result = await Building.find({}).sort({createdAt:-1}).skip(start).limit(10);
     return res.status(200).json(result);
   } catch (error) {
     console.log(error);
@@ -35,7 +35,7 @@ const getEmpty = async (req, res) => {
   let page = req.query.page;
   let start = page ? (page - 1) * 10 : 0;
   try {
-    let result = await Building.find({ empty: true }).skip(start).limit(20);
+    let result = await Building.find({ empty: true }).sort({createdAt:-1}).skip(start).limit(20);
     return res.status(200).json(result);
   } catch (error) {
     console.log(error);
@@ -46,7 +46,7 @@ const getNotEmpty = async (req, res) => {
   let page = req.query.page;
   let start = page ? (page - 1) * 10 : 0;
   try {
-    let result = await Building.find({ empty: false }).skip(start).limit(10);
+    let result = await Building.find({ empty: false }).sort({createdAt:-1}).skip(start).limit(10);
     result = result.filter((i) => i.empty == false);
     return res.status(200).json(result);
   } catch (error) {

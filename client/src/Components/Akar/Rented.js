@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import style from "../RentInfo/Rent.module.css";
-import style2 from "./Rented.module.css";
+import style2 from "../Akar/Rented.module.css";
 import { useNavigate } from "react-router-dom/dist";
 import { Button } from "react-bootstrap";
 export default function Rented(props) {

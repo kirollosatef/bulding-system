@@ -3,7 +3,7 @@ const Client = require("../models/clientModel");
 
 const addClient = async (req, res) => {
   const { name, address, phone, notes } = req.body;
-  // console.log("ooooo", req.body);
+  console.log("ooooo", req.body);
   if (!name) return res.status(400).json("من فضلك ادخل جيمع البيانات");
   try {
     let tmp = await Client.find({ name: name });
@@ -29,7 +29,7 @@ const getAll = async (req, res) => {
   let start = page ? (page - 1) * 10 : 0;
   // let limit = page ? page * 10 : 10;
   try {
-    let result = await Client.find({}).skip(start).limit(10);
+    let result = await Client.find({}).sort({createdAt:-1}).skip(start).limit(10);
     return res.status(200).json(result);
   } catch (error) {
     return res.status(400).json(error);

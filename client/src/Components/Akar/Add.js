@@ -5,6 +5,7 @@ import style3 from "./Referral.module.css";
 
 import { Link, useNavigate } from "react-router-dom";
 import jwtDecode from "jwt-decode";
+import { Alert } from "@mui/material";
 export default function Add(props) {
   props.setSide(true)
   const [type, setType] = useState();
@@ -15,6 +16,7 @@ export default function Add(props) {
   const [location, setLocation] = useState();
   const [done, setDone] = useState();
   const [error, setError] = useState();
+  const [alert,setAlert] = useState(null)
   const navigate = useNavigate();
 
   const add = async (e) => {
@@ -37,10 +39,9 @@ export default function Add(props) {
     });
     if (res.status == 200) {
       res = await res.json();
-      setDone("تم الاضافة بنجاح");
+      setAlert("تم الاضافة بنجاح");
       setTimeout(() => {
-        setDone("");
-        window.location.replace("addAkar");
+        window.location.reload()
       }, [2000]);
       setError("");
     } else {
@@ -59,6 +60,15 @@ export default function Add(props) {
 
   return (
     <div className={style.Fcont}>
+      {alert && (
+        <Alert
+          variant="filled"
+          severity="success"
+          style={{ marginTop: "15px" }}
+        >
+          {alert}
+        </Alert>
+      )}
       <div className={style.Ftop}>
         <Link
           to="/addRent"
