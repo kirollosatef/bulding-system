@@ -13,7 +13,7 @@ app.use(
 );
 app.use(express.json());
 const conect = async () => {
-  await mongoose.connect("mongodb://0.0.0.0:27017/Building").then(
+  await mongoose.connect("mongodb://0.0.0.0:27017/build").then(
     () => {
       console.log("connected to mongodb");
     },
