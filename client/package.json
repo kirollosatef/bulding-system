@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.20",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "jwt-decode": "^3.1.2",
@@ -12,7 +15,8 @@
     "react-qr-code": "^2.0.12",
     "react-router-dom": "^6.14.2",
     "react-scripts": "^5.0.1",
-    "react-to-print": "^2.14.15"
+    "react-to-print": "^2.14.15",
+    "web-vitals": "^3.5.0"
   },
   "scripts": {
     "start": "PORT=3003 react-scripts start",
@@ -37,8 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "web-vitals": "^3.5.0"
   }
 }

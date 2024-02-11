@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import Referral from "../Akar/Referral";
 import E7ala from "../Akar/E7ala";
 import ClientModal from "../Clients/ClientModal";
+import { Alert } from "@mui/material";
 export default function Forms(props) {
   if (props.setSide) props.setSide(true);
   const [show, setShow] = useState(false);
   const [name, setName] = useState();
   const [address, setAddress] = useState();
   const [phone, setPhone] = useState();
-  const [notes, setNotes] = useState();
+  const [alert, setAlert] = useState(false);
   const [date, setDate] = useState();
   const [building, setBuilding] = useState(props.building);
   const [type, setType] = useState("ايجار");
@@ -57,11 +58,10 @@ export default function Forms(props) {
         },
       });
       if (res.status == 200) {
-        setDone("تم الإيجار بنجاح");
+        setAlert("تم الايجار بنجاح")
         setTimeout(() => {
-          setDone("");
-          window.location.replace("/addRent");
-        }, [1000]);
+          window.location.reload()
+        }, 2000);
         setError("");
       } else {
         res = await res.json();
@@ -83,11 +83,10 @@ export default function Forms(props) {
       });
       if (res.status == 200) {
         res = await res.json();
-        setDone("تم التمديد بنجاح");
+        setAlert("تم التمديد بنجاح")
         setTimeout(() => {
-          setDone("");
-          window.location.replace("/addRent");
-        }, [2000]);
+          setAlert(null)
+        }, 2000);
         setError("");
       } else {
         res = await res.json();
@@ -98,6 +97,15 @@ export default function Forms(props) {
 
   return (
     <div className={style.Fcont}>
+      {alert && (
+        <Alert
+          variant="filled"
+          severity="success"
+          style={{ marginTop: "15px" }}
+        >
+          {alert}
+        </Alert>
+      )}
       <Referral
         show={show}
         setShow={setShow}

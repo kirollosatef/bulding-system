@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Modal } from "react-bootstrap";
 import style from "./Referral.module.css";
-import style2 from "./Referral.module.css";
+import style2 from "../Akar/Referral.module.css";
 import { useNavigate } from "react-router-dom";
 import E7ala from "./E7ala";
 export default function Referral(props) {

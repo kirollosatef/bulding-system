@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "../RentInfo/Rent.module.css";
-import style2 from "./info.module.css";
+import style2 from "../Akar/info.module.css";
 import { useNavigate } from "react-router-dom/dist";
 import { Button, Modal } from "react-bootstrap";
 import Forms from "../AddForms/Forms";
